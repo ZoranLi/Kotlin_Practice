@@ -1,8 +1,8 @@
 package com.example.myapplication.module.personal
 
-import com.example.myapplication.module.collect.interf.IbasePresenter
+import com.example.myapplication.base.IBasePresenter
 
-class PersonalPresenter : IbasePresenter {
+class PersonalPresenter : IBasePresenter {
     override fun unAttachView() {
     }
 

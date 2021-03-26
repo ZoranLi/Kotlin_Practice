@@ -7,7 +7,7 @@ import com.example.myapplication.module.login.inter.LoginPresenter
 import com.example.myapplication.module.login.inter.LoginView
 
 //presenter的实现
-class LoginPresentImpl  constructor(var loginView: LoginView) : LoginPresenter,
+class LoginPresentImpl constructor(var loginView: LoginView?) : LoginPresenter,
     LoginPresenter.OnLoginListener {
 
     //需要module 请求服务器
@@ -22,13 +22,22 @@ class LoginPresentImpl  constructor(var loginView: LoginView) : LoginPresenter,
         loginMode.login(context, username, passwrod, this);
     }
 
+    override fun attachView() {
+
+    }
+
+    override fun unAttachView() {
+        loginView = null;
+        loginMode.cancelRequest();
+    }
+
     //    接受Model的结果集
     override fun loginSuccess(loginBean: LoginResponse?) {
-        loginView.loginSuccess(loginBean);
+        loginView?.loginSuccess(loginBean);
     }
 
     override fun loginFailure(errorMsg: String?) {
-        loginView.loginFailure(errorMsg);
+        loginView?.loginFailure(errorMsg);
     }
 
 }

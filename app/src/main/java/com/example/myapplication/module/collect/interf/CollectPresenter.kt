@@ -1,8 +1,9 @@
 package com.example.myapplication.module.collect.interf
 
+import com.example.myapplication.base.IBasePresenter
 import com.example.myapplication.data.Student
 
-interface CollectPresenter : IbasePresenter {
+interface CollectPresenter : IBasePresenter {
 
     //去请求
     fun requestInsert(vararg students: Student);
