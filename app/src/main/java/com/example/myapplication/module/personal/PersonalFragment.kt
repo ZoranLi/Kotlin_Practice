@@ -4,10 +4,8 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import com.example.myapplication.R
-import com.example.myapplication.base.BaseFragment
-import com.example.myapplication.module.collect.interf.CollectView
 
-class PersonalFragment<P> : Fragment() {
+class PersonalFragment : Fragment() {
 
 
     override fun onCreateView(
