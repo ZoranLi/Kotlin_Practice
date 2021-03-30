@@ -5,7 +5,6 @@ import android.view.*
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.myapplication.R
-import kotlinx.android.synthetic.main.fragment_home.*
 
 /**
  * 同学们这是：首页的Fragment
@@ -18,7 +17,7 @@ class HomeFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         Toast.makeText(activity, "首页", Toast.LENGTH_SHORT).show()
-        val root: View? = /*inflater.inflate(R.layout.fragment_home, container, false)*/ null
+        val root: View? = inflater.inflate(R.layout.fragment_home, container, false)
         return root ?: super.onCreateView(inflater, container, savedInstanceState)
     }
 
