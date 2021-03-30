@@ -19,7 +19,7 @@
 
     <fragment
         android:id="@+id/navigation_personal"
-        android:name="PersonalFragment"
+        android:name="com.example.myapplication.module.personal.PersonalFragment"
         android:label="@string/title_personal"
         tools:layout="@layout/fragment_personal" />
 

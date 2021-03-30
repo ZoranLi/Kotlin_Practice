@@ -13,6 +13,7 @@
         tools:ignore="ProtectedPermissions" />
 
     <application
+        android:name=".BaseApplication"
         android:allowBackup="true"
         android:fullBackupContent="@xml/backup_descriptor"
         android:icon="@mipmap/ic_launcher"
@@ -23,14 +24,14 @@
         android:theme="@style/Theme.MyApplication"
         tools:targetApi="n">
         <activity android:name=".module.login.LoginActivity">
+
+        </activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".MainActivity">
-
         </activity>
     </application>
 

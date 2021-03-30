@@ -22,9 +22,9 @@ class LoginPresentImpl constructor(var loginView: LoginView?) : LoginPresenter,
         loginMode.login(context, username, passwrod, this);
     }
 
-    override fun attachView() {
-
-    }
+//    override fun attachView() {
+//
+//    }
 
     override fun unAttachView() {
         loginView = null;

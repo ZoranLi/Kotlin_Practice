@@ -33,16 +33,20 @@ class CollectPresenterImpl(var view: CollectView?) : CollectPresenter,
         module.requestQueryAll(this)
     }
 
+//    override fun attachView() {
+//
+//    }
+
     override fun unAttachView() {
         view = null;
     }
 
     override fun showResultSuccess(result: List<Student>?) {
-        TODO("Not yet implemented")
+        view?.showResultSuccess(result);
     }
 
     override fun showIUD(iudResult: Boolean) {
-        TODO("Not yet implemented")
+        view?.showResult(iudResult);
     }
 
 

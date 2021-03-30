@@ -7,7 +7,6 @@ import androidx.room.PrimaryKey
 @Entity
 class Student() {
 
-
     @PrimaryKey(autoGenerate = true)
     var id: Int = 0;//主键自增
 
@@ -22,4 +21,6 @@ class Student() {
         this.age = age;
     }
 
+
+    
 }

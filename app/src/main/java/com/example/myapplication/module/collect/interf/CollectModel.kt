@@ -13,6 +13,6 @@ interface CollectModel {
 
     fun requestDeleteAll(listener: CollectPresenter.OnCollectListener);//删除全部
 
-    fun requestQueryAll(listener: CollectPresenter.OnCollectListener);//查询全部
+    fun requestQueryAll(listener: CollectPresenter.OnCollectResponseListener);//查询全部
 
 }

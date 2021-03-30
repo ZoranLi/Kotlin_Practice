@@ -10,9 +10,7 @@ abstract class BaseFragment<P> : Fragment() where P : IBasePresenter {
 
     lateinit var p: P;
 
-
     private lateinit var mActivity: AppCompatActivity;
-
 
     override fun onAttach(context: Context) {
         super.onAttach(context)
@@ -41,11 +39,11 @@ abstract class BaseFragment<P> : Fragment() where P : IBasePresenter {
     abstract fun recycle()
 
     fun hideActionBar(): Unit {
-        var actionBar: ActionBar? = mActivity?.supportActionBar;
+        val actionBar: ActionBar? = mActivity?.supportActionBar;
         actionBar?.hide();
     }
 
     fun showActionBar(): Unit {
-        mActivity?.supportActionBar?.show();
+        mActivity.supportActionBar?.show();
     }
 }

@@ -21,7 +21,6 @@ class APIClient {
         val instance = Holder.INSTANCE;
     }
 
-
     fun <T> instanceRetrofit(apiInterface: Class<T>): T {
         val okHttpClient = OkHttpClient()
             .newBuilder()

@@ -4,7 +4,7 @@ import com.example.myapplication.data.Student
 
 interface CollectView {
 
-    fun showResultSuccess(result: List<Student>);
+    fun showResultSuccess(result: List<Student>?);
 
     fun showResult(result: Boolean);
 }
