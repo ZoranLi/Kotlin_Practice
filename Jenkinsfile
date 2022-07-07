@@ -5,6 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
+                sh 'gradlew assembleRelease' 
             }
         }
         stage('Test') {
