@@ -5,7 +5,7 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building..'
-                sh 'gradlew assembleRelease' 
+                bat 'gradlew assembleRelease' 
             }
         }
         stage('Test') {
