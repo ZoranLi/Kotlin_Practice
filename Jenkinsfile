@@ -7,11 +7,8 @@ pipeline {
                
                 echo 'Building..'
                 bat 'gradlew assembleRelease' 
-                script {
-                    DATE_TAG = java.time.LocalDate.now()
-                    DATETIME_TAG = java.time.LocalDateTime.now()
-                }
-                echo DATETIME_TAG
+               
+                echo %date%
                 bat 'copy .\\bin\\App.apk ..\\apps\\app.apk'
             }
         }
