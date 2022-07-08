@@ -8,7 +8,6 @@ pipeline {
                 echo 'Building..'
                 bat 'gradlew assembleRelease' 
                
-                echo %date%
                 bat 'copy .\\bin\\App.apk ..\\apps\\app.apk'
             }
         }
