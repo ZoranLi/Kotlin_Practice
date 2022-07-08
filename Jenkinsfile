@@ -4,10 +4,14 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-               def now = new Date()
+               
                 echo 'Building..'
                 bat 'gradlew assembleRelease' 
-                bat 'copy .\bin\App.apk ..\apps\${now}.apk'
+                script {
+                    DATE_TAG = java.time.LocalDate.now()
+                    DATETIME_TAG = java.time.LocalDateTime.now()
+                }
+                bat 'copy .\bin\App.apk ..\apps\${DATETIME_TAG}.apk'
             }
         }
         stage('Test') {
