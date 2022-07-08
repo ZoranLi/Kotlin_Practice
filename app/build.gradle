@@ -38,6 +38,12 @@ android {
         checkReleaseBuilds false
         abortOnError false
     }
+     applicationVariants.all { variant ->
+        variant.outputs.all {
+            variant.getPackageApplication().outputDirectory = new File(project.rootDir.absolutePath + File.separator + "bin")
+            outputFileName = "App.apk"
+        }
+    }
 }
 
 dependencies {
