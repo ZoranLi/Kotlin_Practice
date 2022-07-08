@@ -11,7 +11,8 @@ pipeline {
                     DATE_TAG = java.time.LocalDate.now()
                     DATETIME_TAG = java.time.LocalDateTime.now()
                 }
-                bat 'copy .\bin\App.apk ..\apps\${DATETIME_TAG}.apk'
+                echo DATETIME_TAG
+                bat 'copy .\bin\App.apk ..\apps\app.apk'
             }
         }
         stage('Test') {
