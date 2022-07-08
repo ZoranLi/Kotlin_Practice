@@ -12,7 +12,7 @@ pipeline {
                     DATETIME_TAG = java.time.LocalDateTime.now()
                 }
                 echo DATETIME_TAG
-                bat 'copy .\bin\App.apk ..\apps\app.apk'
+                bat 'copy .\\bin\\App.apk ..\\apps\\app.apk'
             }
         }
         stage('Test') {
